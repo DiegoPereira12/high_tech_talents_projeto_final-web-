@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Proprietários</h1>
+    <hr>
+    <form action="{{ url_for('cadastro_proprietario') }}" method="POST">
+        <table>
+            <tr>
+                <td>Nome</td>
+                <td><input type="text" name="nome"></td>
+            </tr>
+            <tr>
+                <td>CPF</td>
+                <td><input type="text" name="cpf"></td>
+            </tr>
+            <tr>
+                <td>Data de nascimento</td>
+                <td><input type="text" name="data_nascimento"></td>
+            </tr>
+        </table><br>
+        <input type="submit" value="Cadastrar">
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

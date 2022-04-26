@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Imóveis</h1>
+    <hr>
+    <form action="{{ url_for('cadastro_imovel') }}" method="POST">
+        <table>
+            <tr>
+                <td>Logradouro</td>
+                <td><input type="text" name="logradouro"></td>
+            </tr>
+            <tr>
+                <td>CEP</td>
+                <td><input type="text" name="cep"></td>
+            </tr>
+            <tr>
+                <td>Bairro</td>
+                <td><input type="text" name="bairro"></td>
+            </tr>
+            <tr>
+                <td>Cidade</td>
+                <td><input type="text" name="cidade"></td>
+            </tr>
+            <tr>
+                <td>Proprietário ID</td>
+                <td><input type="text" name="proprietario_id"></td>
+            </tr>
+        </table><br>
+        <input type="submit" value="Cadastrar">
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

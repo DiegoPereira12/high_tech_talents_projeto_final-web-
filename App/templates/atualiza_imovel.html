@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar</title>
+</head>
+<body>
+    <h1>Atualização de Cadastro de Imóveis</h1>
+    <hr>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td>Logradouro</td>
+                <td><input type="text" name="logradouro" value="{{ imovel.logradouro }}"></td>
+            </tr>
+            <tr>
+                <td>CEP</td>
+                <td><input type="text" name="cep" value="{{ imovel.cep }}"></td>
+            </tr>
+            <tr>
+                <td>bairro</td>
+                <td><input type="text" name="bairro" value="{{ imovel.bairro }}"></td>
+            </tr>
+            <tr>
+                <td>Cidade</td>
+                <td><input type="text" name="cidade" value="{{ imovel.cidade }}"></td>
+            </tr>
+            <tr>
+                <td>Proprietário</td>
+                <td><input type="text" name="proprietario_id" value="{{ imovel.proprietario_id }}"></td>
+            </tr>
+        </table><br>
+        <input type="submit" value="Atualizar">
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

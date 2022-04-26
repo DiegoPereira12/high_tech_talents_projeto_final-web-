@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Aluguel</h1>
+    <hr>
+    <form action="{{ url_for('cadastro_aluguel') }}" method="POST">
+        <table>
+            <tr>
+                <td>ID Imóvel</td>
+                <td><input type="text" name="id_imovel"></td>
+            </tr>
+            <tr>
+                <td>ID Inquilino</td>
+                <td><input type="text" name="id_inquilino"></td>
+            </tr>
+        </table><br>
+        <input type="submit" value="Cadastrar">
+        <a href="/">Voltar</a>
+    </form>
+</body>
+</html>

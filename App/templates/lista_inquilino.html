@@ -16,14 +16,14 @@
             <td>Excluir</td>
             <td>Atualizar</td>
         </tr>
-        {% for inquilinos in inquilinos %}
+        {% for inquilinos in inq %}
             <tr>
                 <td>{{ inquilinos.id }}</td>
                 <td>{{ inquilinos.nome }}</td>
                 <td>{{ inquilinos.cpf }}</td>
                 <td>{{ inquilinos.data_nascimento }}</td>
-                <td><a href="/excluir/{{ inquilinos.id }}">Excluir</a></td>
-                <td><a href="/atualizar/{{ inquilinos.id }}">Atualizar</a></td>
+                <td><a href="/excluir_inquilino/{{ inquilinos.id }}">Excluir</a></td>
+                <td><a href="/atualizar_inquilino/{{ inquilinos.id }}">Atualizar</a></td>
             </tr>
         {% endfor %}
     </table>

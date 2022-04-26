@@ -5,21 +5,21 @@
     <title>Atualizar</title>
 </head>
 <body>
-    <h1>Atualização de Cadastro de Inquilinos</h1>
+    <h1>Atualização de Cadastro de Proprietários</h1>
     <hr>
     <form action="" method="POST">
         <table>
             <tr>
                 <td>Nome</td>
-                <td><input type="text" name="nome" value="{{ inquilinos.nome }}"></td>
+                <td><input type="text" name="nome" value="{{ proprietario.nome }}"></td>
             </tr>
             <tr>
                 <td>CPF</td>
-                <td><input type="text" name="cpf" value="{{ inquilinos.cpf }}"></td>
+                <td><input type="text" name="cpf" value="{{ proprietario.cpf }}"></td>
             </tr>
             <tr>
                 <td>Data de nascimento</td>
-                <td><input type="text" name="data_nascimento" value="{{ inquilinos.data_nascimento }}"></td>
+                <td><input type="text" name="data_nascimento" value="{{ proprietario.data_nascimento }}"></td>
             </tr>
         </table><br>
         <input type="submit" value="Atualizar">
