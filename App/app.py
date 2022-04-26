@@ -18,69 +18,72 @@ class InquilinosModel(db.Model):
     def __init__(self, nome, cpf, data_nascimento):
         self.nome = nome        
         self.cpf = cpf
-        self.data_nascimento = data_nascimento                         
+        self.data_nascimento = data_nascimento        
 
-app.route("/")
-def index_inquilinos():
-    return render_template("index_inquilino.html")
+    #def __repr__(self):
+    #    return f"<InquilinosModel {self.id}: {self.nome}, nascida(o) em {self.data_de_nascimento}.>"                 
 
-app.route("/cadastrar_inquilino")
-def cadastrar_inquilino():
-    return render_template("cadastro_inquilino.html")
+    app.route("/")
+    def index_inquilinos():
+        return render_template("index_inquilino.html")
 
-@app.route("/cadastro_inquilino", methods=['GET', 'POST'])
-def cadastro_inquilino():
-    if request.method == "POST":
-        nome = request.form.get("nome")
-        cpf = request.form.get("cpf")
-        data_nascimento= request.form.get("data_nascimento")
+    app.route("/cadastrar_inquilino")
+    def cadastrar_inquilino():
+        return render_template("cadastro_inquilino.html")
 
-        if nome and cpf and data_nascimento:
-            inq = InquilinosModel(nome, cpf, data_nascimento)
-            db.session.add(inq)
-            db.session.commit()
-    
-    return redirect(url_for("index_inquilino"))
+    @app.route("/cadastro_inquilino", methods=['GET', 'POST'])
+    def cadastro_inquilino():
+        if request.method == "POST":
+            nome = request.form.get("nome")
+            cpf = request.form.get("cpf")
+            data_nascimento= request.form.get("data_nascimento")
 
-@app.route("/lista_inquilino")
-def lista_inquilino():
-    inq = InquilinosModel.query.all()
-    return render_template("lista_inquilino.html", inq=inq)
+            if nome and cpf and data_nascimento:
+                inq = InquilinosModel(nome, cpf, data_nascimento)
+                db.session.add(inq)
+                db.session.commit()
+        
+        return redirect(url_for("index_inquilino"))
 
-
-@app.route("/excluir/<int:id>")
-def excluir_inquilino(id):
-    inq = InquilinosModel.query.filter_by(_id=id).first()
-
-    db.session.delete(inq)
-    db.session.commit()
-
-    inq = InquilinosModel.query.all()
-
-    return render_template("lista_inquilinos.html", inq=inq)
-
-@app.route("/atualizar/<int:id>", methods=['GET', 'POST'])
-def atualizar_inquilinos(id):
-    inq = InquilinosModel.query.filter_by(_id=id).first()
-
-    if request.method == 'POST':
-        nome = request.form.get("nome")
-        cpf = request.form.get("cpf")
-        data_nascimento= request.form.get("data_nascimento")
-
-        if nome and cpf and data_nascimento:
-            inq = InquilinosModel(nome, cpf, data_nascimento)
-            db.session.add(inq)
-            db.session.commit()
-
-            db.session.commit()
-
-            return redirect(url_for("lista_inquilino"))
-
-    return render_template("atualiza_inquilino.html", inq=inq)
+    @app.route("/lista_inquilino")
+    def lista_inquilino():
+        inq = InquilinosModel.query.all()
+        return render_template("lista_inquilino.html", inq=inq)
 
 
+    @app.route("/excluir/<int:id>")
+    def excluir_inquilino(id):
+        inq = InquilinosModel.query.filter_by(_id=id).first()
 
+        db.session.delete(inq)
+        db.session.commit()
+
+        inq = InquilinosModel.query.all()
+
+        return render_template("lista_inquilinos.html", inq=inq)
+
+    @app.route("/atualizar/<int:id>", methods=['GET', 'POST'])
+    def atualizar_inquilinos(id):
+        inq = InquilinosModel.query.filter_by(_id=id).first()
+
+        if request.method == 'POST':
+            nome = request.form.get("nome")
+            cpf = request.form.get("cpf")
+            data_nascimento= request.form.get("data_nascimento")
+
+            if nome and cpf and data_nascimento:
+                inq = InquilinosModel(nome, cpf, data_nascimento)
+                db.session.add(inq)
+                db.session.commit()
+
+                db.session.commit()
+
+                return redirect(url_for("lista_inquilino"))
+
+        return render_template("atualiza_inquilino.html", inq=inq)
+
+
+############################################################################
 
 class ImovelModel(db.Model):
     __tablename__ = 'imovel'
@@ -98,9 +101,11 @@ class ImovelModel(db.Model):
         self.bairro = bairro
         self.cidade = cidade
         self.proprietario = proprietario
-        
+  
 
 
+
+#####################################################################################
 class ProprietarioModel(db.Model):
     __tablename__ = 'proprietario'
 
