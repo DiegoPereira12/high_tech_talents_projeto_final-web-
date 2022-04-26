@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Inquilinos</title>
+</head>
+<body>
+    <h1>Lista de Inquilinos</h1>
+    <hr>
+    <table border=4>
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>CPF</td>
+            <td>Data de nascimento</td>
+            <td>Excluir</td>
+            <td>Atualizar</td>
+        </tr>
+        {% for inquilinos in inquilinos %}
+            <tr>
+                <td>{{ inquilinos.id }}</td>
+                <td>{{ inquilinos.nome }}</td>
+                <td>{{ inquilinos.cpf }}</td>
+                <td>{{ inquilinos.data_nascimento }}</td>
+                <td><a href="/excluir/{{ inquilinos.id }}">Excluir</a></td>
+                <td><a href="/atualizar/{{ inquilinos.id }}">Atualizar</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Voltar</a>
+</body>
+</html>
