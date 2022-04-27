@@ -1,6 +1,6 @@
 ## Sistema imobiliária
 
-<h5> O sistema contará com as funcinalidades descritas abaixo, onde usuário poderá fazer interações para cadastrar, listar, alterar e excluir as informações via console.
+<h5> O sistema contará com as funcinalidades descritas abaixo, onde usuário poderá fazer interações para cadastrar, listar, alterar e excluir as informações via web.
 
 ________________________________________________________
 
