@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>EXCLUIR IMÓVEL</title>
+    </head>
+    <body>
+        <hr/>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">EXCLUIR IMÓVEL</h2>
+            </header>
+            <form align="center" action="" method="post">
+                <b>Id:</b> {{ imovel.id }}<br>
+                <b>Logradouro:</b> {{ imovel.logradouro }}<br>
+                <b>CEP:</b> {{ imovel.cep }}<br>
+                <b>Bairro:</b> {{ imovel.bairro }}<br>
+                <b>Cidade:</b> {{ imovel.cidade }}<br>
+                <b>Proprietário:</b> {{ imovel.proprietario }}<br><br>
+                <input class="enviar" type="submit" value="Excluir" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_imovel') }}"> Voltar </a>
+            </form>
+        </section>
+    </body>
+</html>

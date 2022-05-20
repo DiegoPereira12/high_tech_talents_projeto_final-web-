@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from app import db
 
+
 class InquilinosModel(db.Model):
     __tablename__ = 'inquilino'
 
@@ -16,3 +17,21 @@ class InquilinosModel(db.Model):
     
     def __repr__(self):
       return f"<Inquilinos {self.nome}>"
+
+
+class ImovelModel(db.Model):
+    __tablename__ = 'imovel'
+
+    id = db.Column(db.Integer, primary_key = True)
+    logradouro = db.Column(db.String())
+    cep = db.Column(db.String()) 
+    bairro = db.Column(db.String())
+    cidade = db.Column(db.String())
+    proprietario = db.Column(db.String())
+
+    def __init__(self, logradouro, cep, bairro, cidade, proprietario):
+        self.logradouro = logradouro
+        self.cep = cep
+        self.bairro = bairro
+        self.cidade = cidade
+        self.proprietario = proprietario

@@ -2,6 +2,7 @@ from flask import request, flash, url_for, redirect, render_template
 from app import app, db
 from models.models import *
 
+
 @app.route('/')
 def main():
 
@@ -31,7 +32,6 @@ def cadastro_inquilino():
 
             return redirect(url_for('lista_inquilino'))
     return render_template('cadastro_inquilino.html')
-
 
 @app.route('/update_inquilino/<id>', methods=['GET', 'POST'])
 def update_inquilino(id):

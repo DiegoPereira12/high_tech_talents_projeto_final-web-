@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>ATUALIZAR IMÓVEL</title>
+    </head>
+    <body>
+        <hr/>
+        <header>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        </header>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">ATUALIZAR IMÓVEL</h2>
+            </header>
+            <form align="center" action="" method="post" >
+                <input type="hidden" name="id_imovel" value="{{imovel.id}}" />
+                <label for="logradouro">Logradouro</label><br>
+                <input type="text" name="logradouro" placeholder="logradouro" value="{{imovel.logradouro}}" /><br>
+                <label for="cep">CEP</label><br>
+                <input type="text" name="cep" placeholder="CEP" value="{{imovel.cep}}" /><br>
+                <label for="bairro">Bairro</label><br>
+                <input name="bairro" placeholder="bairro" value="{{imovel.bairro}}" /><br> 
+                <label for="cidade">Cidade</label><br>
+                <input name="cidade" placeholder="cidade" value="{{imovel.cidade}}" /><br>
+                <label for="proprietario">Proprietário</label><br>
+                <input name="proprietario" placeholder="proprietario" value="{{imovel.proprietario}}" /><br><br>
+                <input class="enviar" type="submit" value="Atualizar" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_imovel') }}"> Voltar </a>
+            </form>
+        </section>  
+    </body>
+</html>

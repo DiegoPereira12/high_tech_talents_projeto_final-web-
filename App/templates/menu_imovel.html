@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>MENU IMOVEL</title>
+    </head>
+    <body>
+        <hr/>
+            <h1 class="cor_title" align="center">IMOBILIÁRIA SANDIEGO</h1>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">MENU IMÓVEL</h2>
+            </header>
+            <form align="center"> 
+                <a class="box" href= "{{ url_for('cadastro_imovel') }}">Cadastrar Imóvel</a>
+                <a class="box" href= "{{ url_for('lista_imovel') }}">Listar Imóvel</a><br><br>
+            </form>
+        </section>
+        <section align="center">
+            <a class="botao_acao" href="{{ url_for('main') }}"> Voltar </a>
+        </section>
+    </body>
+</html>

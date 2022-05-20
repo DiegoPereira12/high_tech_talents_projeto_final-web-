@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>CADASTRAR IMÓVEL</title>
+    </head>
+    <body>
+        <hr/>
+        <header>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        </header>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">CADASTRAR IMÓVEL</h2>
+            </header>
+            <form align="center" action ="" method = "post">
+                <label for="logradouro">Logradouro</label><br>
+                <input type="text" name="logradouro" placeholder="logradouro" /><br>
+                <label for="cep">CEP</label><br>
+                <input type="text" name="cep" placeholder="cep" /><br>
+                <label for="bairro">Bairro</label><br>
+                <input name="bairro" placeholder="bairro" /><br>
+                <label for="cidade">Cidade</label><br>
+                <input name="cidade" placeholder="cidade" /><br>
+                <label for="proprietario">Proprietário</label><br>
+                <input name="proprietario" placeholder="proprietario" /><br><br>
+                <input type="submit" value="Cadastrar" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_imovel') }}"> Voltar </a>
+            </form>
+        </section>
+    </body>
+</html>
