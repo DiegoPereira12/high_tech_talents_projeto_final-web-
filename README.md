@@ -11,8 +11,8 @@ ________________________________________________________
 ### Funcionalidades do Sistema
 * Cadastrar Inquilino
 * Cadastrar Imóvel
-* Cadastrar Proprietário
-* Cadastrar Aluguel
+* Cadastrar Proprietário :hammer_and_wrench:
+* Cadastrar Aluguel :hammer_and_wrench:
 _______________________________________________________
   
 ##### Ferramentas utilizadas: Python | HTML | CSS | Flask | PostgreSQL |
