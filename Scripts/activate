@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\User\Documents\high_tech_talents_projeto_final_web"
+VIRTUAL_ENV="C:\Users\User\Documents\imobiliaria_web_flask"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -55,9 +55,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(high_tech_talents_projeto_final_web) ${PS1:-}"
+    PS1="(imobiliaria_web_flask) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(high_tech_talents_projeto_final_web) "
+    VIRTUAL_ENV_PROMPT="(imobiliaria_web_flask) "
     export VIRTUAL_ENV_PROMPT
 fi
 

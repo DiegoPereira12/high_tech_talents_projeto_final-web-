@@ -1,0 +1,39 @@
+body{
+    background: #FDF5E6;
+    font-family: Calibri;
+    max-width: 900px;
+    margin: auto;
+}
+
+.box:hover{
+    
+    color: white;   
+}
+
+.botao_acao:hover {
+
+    color: #D2691E;
+}    
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.cor_title{
+    color: #D2691E;
+}
+
+.thead {
+    background : #D2691E;
+}
+
+.box {
+  
+  font-size: 25px;  
+  background: #D2691E;
+  color: black;
+  padding-left: 25px;
+  padding-right: 25px;
+}

@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Cadastro de Inquilinos</h1>
-    <hr>
-    <form action="{{ url_for('cadastro_inquilino') }}" method="POST">
-        <table>
-            <tr>
-                <td>Nome</td>
-                <td><input type="text" name="nome"></td>
-            </tr>
-            <tr>
-                <td>CPF</td>
-                <td><input type="text" name="cpf"></td>
-            </tr>
-            <tr>
-                <td>Data de nascimento</td>
-                <td><input type="text" name="data_nascimento"></td>
-            </tr>
-        </table><br>
-        <input type="submit" value="Cadastrar">
-        <a href="/">Voltar</a>
-    </form>
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>CADASTRAR INQUILINO</title>
+    </head>
+    <body>
+        <hr/>
+        <header>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        </header>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">CADASTRAR INQUILINOS</h2>
+            </header>
+            <form align="center" action ="" method = "post">
+                <label for="nome">Nome</label><br>
+                <input type="text" name="nome" placeholder="Nome" /><br>
+                <label for="cpf">CPF</label><br>
+                <input type="text" name="cpf" placeholder="CPF" /><br>
+                <label for="data_nascimento">Data de Nascimento</label><br>
+                <input name="data_nascimento" placeholder="Data de Nascimento" /><br><br>
+                <input type="submit" value="Cadastrar" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_inquilino') }}"> Voltar </a>
+            </form>
+        </section>
+    </body>
 </html>
