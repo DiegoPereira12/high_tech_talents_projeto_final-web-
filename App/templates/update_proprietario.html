@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>ATUALIZAR PROPRIETÁRIO</title>
+    </head>
+    <body>
+        <hr/>
+        <header>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        </header>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">ATUALIZAR PROPRIETÁRIO</h2>
+            </header>
+            <form align="center" action="" method="post" >
+                <input type="hidden" name="id_proprietario" value="{{proprietario.id}}" />
+                <label for="nome">Nome</label><br>
+                <input type="text" name="nome" placeholder="Nome" value="{{proprietario.nome}}" /><br>
+                <label for="cpf">CPF</label><br>
+                <input type="text" name="cpf" placeholder="CPF" value="{{proprietario.cpf}}" /><br>
+                <label for="data_nascimento">Data de Nascimento</label><br>
+                <input name="data_nascimento" placeholder="Data de Nascimento" value="{{proprietario.data_nascimento}}" /><br><br>          
+                <input class="enviar" type="submit" value="Atualizar" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_proprietario') }}"> Voltar </a>
+            </form>
+        </section>  
+    </body>
+</html>

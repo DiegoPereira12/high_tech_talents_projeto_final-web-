@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/style.css">
+      <title >IMOBILIÁRIA SANDIEGO</title>
+   </head>
+   <body>
+      <hr/>
+      <header>
+         <h1 class="cor_title" align="center"> IMOBILIÁRIA SANDIEGO </h1>
+      </header>
+      <hr/>
+      <section>  
+         <header>
+            <h2 align="center">PROPRIETÁRIOS CADASTRADOS</h2>
+         </header>
+         <table border="1" align="center">
+            <thead>
+               <tr class="thead">
+                  <th>Nome</th>
+                  <th>CPF</th>
+                  <th>Data de Nascimento</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for proprietario in proprietario %}
+                  <tr align="center">
+                     <td>{{ proprietario.nome }}</td>
+                     <td>{{ proprietario.cpf }}</td>
+                     <td>{{ proprietario.data_nascimento }}</td>
+                     <th><a class="botao_acao" href = "{{ url_for('update_proprietario', id=proprietario.id) }}"> Atualizar</a></th>
+                     <th><a class="botao_acao" href = "{{ url_for('delete_proprietario', id=proprietario.id) }}"> Excluir </a></th>
+                  </tr>
+               {% endfor %}
+            </tbody>   
+            </table><br>
+        </section>
+        <section align="center">
+            <a class="botao_acao" href="{{ url_for('menu_proprietario') }}"> Voltar </a>
+        </section>
+   </body>
+</html>
+

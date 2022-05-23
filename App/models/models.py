@@ -13,11 +13,7 @@ class InquilinosModel(db.Model):
     def __init__(self, nome, cpf, data_nascimento):
         self.nome = nome        
         self.cpf = cpf
-        self.data_nascimento = data_nascimento
-    
-    def __repr__(self):
-      return f"<Inquilinos {self.nome}>"
-
+        self.data_nascimento = data_nascimento   
 
 class ImovelModel(db.Model):
     __tablename__ = 'imovel'
@@ -35,3 +31,18 @@ class ImovelModel(db.Model):
         self.bairro = bairro
         self.cidade = cidade
         self.proprietario = proprietario
+
+class ProprietarioModel(db.Model):
+    __tablename__ = 'proprietario'
+    
+    id = db.Column(db.Integer, primary_key = True)
+    nome = db.Column(db.String())
+    cpf = db.Column(db.String())
+    data_nascimento = db.Column(db.String())
+
+    def __init__(self, nome, cpf, data_nascimento):
+        self.nome = nome        
+        self.cpf = cpf
+        self.data_nascimento = data_nascimento
+    
+

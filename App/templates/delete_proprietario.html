@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>EXCLUIR PROPRIETÁRIO</title>
+    </head>
+    <body>
+        <hr/>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">EXCLUIR PROPRIETÁRIO</h2>
+            </header>
+            <form align="center" action="" method="post">
+                <b>Id:</b> {{ proprietario.id }}<br>
+                <b>Nome:</b> {{ proprietario.nome }}<br>
+                <b>CPF:</b> {{ proprietario.cpf }}<br>
+                <b>Data Nascimento:</b> {{ proprietario.data_nascimento }}<br><br>
+                <input class="enviar" type="submit" value="Excluir" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_proprietario') }}"> Voltar </a>
+            </form>
+        </section>
+    </body>
+</html>

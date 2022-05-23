@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>CADASTRAR PROPRIETÁRIO</title>
+    </head>
+    <body>
+        <hr/>
+        <header>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        </header>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">CADASTRAR PROPRIETÁRIOS</h2>
+            </header>
+            <form align="center" action ="" method = "post">
+                <label for="nome">Nome</label><br>
+                <input type="text" name="nome" placeholder="Nome" /><br>
+                <label for="cpf">CPF</label><br>
+                <input type="text" name="cpf" placeholder="CPF" /><br>
+                <label for="data_nascimento">Data de Nascimento</label><br>
+                <input name="data_nascimento" placeholder="Data de Nascimento" /><br><br>
+                <input type="submit" value="Cadastrar" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_proprietario') }}"> Voltar </a>
+            </form>
+        </section>
+    </body>
+</html>

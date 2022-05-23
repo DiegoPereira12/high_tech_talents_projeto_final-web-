@@ -14,6 +14,7 @@ migrate = Migrate(app, db)
 
 from routes.routes_inquilino import *
 from routes.routes_imovel import * 
+from routes.routes_proprietario import *
 
 if __name__ == '__main__':
    app.run(debug=True)          
