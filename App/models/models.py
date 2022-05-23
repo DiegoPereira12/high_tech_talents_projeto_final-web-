@@ -44,5 +44,17 @@ class ProprietarioModel(db.Model):
         self.nome = nome        
         self.cpf = cpf
         self.data_nascimento = data_nascimento
-    
+
+class AluguelModel(db.Model):
+    __tablename__ = 'aluguel'
+
+    id = db.Column(db.Integer, primary_key = True)
+    id_inquilino = db.Column(db.Integer(), db.ForeignKey('inquilino.id'), nullable=False)
+    id_imovel = db.Column(db.Integer(), db.ForeignKey('imovel.id'), nullable=False)
+
+    def __init__(self, id_inquilino, id_imovel):
+        self.id_inquilino = id_inquilino
+        self.id_imovel = id_imovel
+        
+        
 

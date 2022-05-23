@@ -1,3 +1,4 @@
+import imp
 from operator import imod
 from flask import Flask, request, flash, url_for, redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
@@ -15,6 +16,7 @@ migrate = Migrate(app, db)
 from routes.routes_inquilino import *
 from routes.routes_imovel import * 
 from routes.routes_proprietario import *
+from routes.routes_aluguel import *
 
 if __name__ == '__main__':
    app.run(debug=True)          
