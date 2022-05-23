@@ -11,7 +11,7 @@ ________________________________________________________
 ### Funcionalidades do Sistema
 * Cadastrar Inquilino
 * Cadastrar Imóvel
-* Cadastrar Proprietário :hammer_and_wrench:
+* Cadastrar Proprietário
 * Cadastrar Aluguel :hammer_and_wrench:
 _______________________________________________________
   
