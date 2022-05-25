@@ -17,13 +17,47 @@ def lista_aluguel():
 def cadastro_aluguel():
 
     if request.method == 'POST':
-        if not request.form['nome'] or not request.form['cpf'] or not request.form['data_nascimento']:
+        if not request.form['id_imovel'] or not request.form['id_inquilino']:
             flash('Por favor preencha todos os campos')
         else:
-            aluguel = AluguelModel(request.form['nome'], request.form['cpf'], request.form['data_nascimento'])
+            aluguel = AluguelModel(request.form['id_imovel'], request.form['id_inquilino'])
 
             db.session.add(aluguel)
             db.session.commit()
 
-            return redirect(url_for('lista_inquilino'))
-    return render_template('cadastro_inquilino.html')
+            return redirect(url_for('lista_aluguel'))
+
+    return render_template('cadastro_aluguel.html', imovel=ImovelModel.query.all(), inquilino=InquilinosModel.query.all())
+
+@app.route('/update_aluguel/<id>', methods=['GET', 'POST'])
+def update_aluguel(id):
+
+    aluguel = AluguelModel.query.filter_by(id=id).first()
+    
+    if request.method == 'GET':
+         return render_template('update_aluguel.html', aluguel=aluguel)
+
+    if request.method == 'POST':
+        aluguel.id_imovel = request.form["id_imovel"]
+        aluguel.id_inquilino = request.form["id_inquilino"]
+                
+        db.session.add(aluguel)
+        db.session.commit()
+
+        return redirect(url_for('lista_aluguel'))
+
+@app.route('/delete_aluguel/<id>', methods=['GET', 'POST'])
+def delete_aluguel(id):
+
+    aluguel = AluguelModel.query.filter_by(id=id).first()
+    if request.method == 'GET':
+        return render_template('delete_aluguel.html', aluguel=aluguel)
+
+    if request.method == 'POST':
+        db.session.delete(aluguel)
+        db.session.commit()
+
+        return redirect(url_for('lista_aluguel'))
+
+
+

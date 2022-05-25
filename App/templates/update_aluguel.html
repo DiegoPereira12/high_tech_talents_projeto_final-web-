@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>ATUALIZAR ALUGUEL</title>
+    </head>
+    <body>
+        <hr/>
+        <header>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        </header>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">ATUALIZAR ALUGUEL</h2>
+            </header>
+            <form align="center" action="" method="post" >
+                <input type="hidden" name="id_aluguel" value="{{aluguel.id}}" />
+                <label for="id_imovel">ID Imóvel (Proprietário)</label><br>
+                <input type="text" name="id_imovel" placeholder="ID Imóvel" value="{{aluguel.id_imovel}}" /><br>
+                <label for="id_inquilino">ID Inquilino (Nome)</label><br>
+                <input type="text" name="id_inquilino" placeholder="ID Inquilino" value="{{aluguel.id_inquilino}}" /><br><br>       
+                <input class="enviar" type="submit" value="Atualizar" /><br>
+                <a class="botao_acao" href="{{ url_for('menu_aluguel') }}"> Voltar </a>
+            </form>
+        </section>  
+    </body>
+</html>

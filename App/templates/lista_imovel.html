@@ -18,21 +18,21 @@
          <table border="1" align="center">
             <thead>
                <tr class="thead">
+                  <th>Proprietário</th>
                   <th>Logradouro</th>
                   <th>CEP</th>
                   <th>Bairro</th>
                   <th>Cidade</th>
-                  <th>Proprietario</th>
                </tr>
             </thead>
             <tbody>
                {% for imovel in imovel %}
                   <tr align="center">
+                     <td>{{ imovel.proprietario }}</td>
                      <td>{{ imovel.logradouro }}</td>
                      <td>{{ imovel.cep }}</td>
                      <td>{{ imovel.bairro }}</td>
                      <td>{{ imovel.cidade }}</td>
-                     <td>{{ imovel.proprietario }}</td>
                      <th><a class="botao_acao" href = "{{ url_for('update_imovel', id=imovel.id) }}"> Atualizar</a></th>
                      <th><a class="botao_acao" href = "{{ url_for('delete_imovel', id=imovel.id) }}"> Excluir </a></th>
                   </tr>

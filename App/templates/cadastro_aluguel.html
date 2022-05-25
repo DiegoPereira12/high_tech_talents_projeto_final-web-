@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>CADASTRAR ALUGUEL</title>
+    </head>
+    <body>
+        <hr/>
+        <header>
+            <h1 class="cor_title" align="center" >IMOBILIÁRIA SANDIEGO</h1>
+        </header>
+        <hr/>
+        <section>
+            <header>
+                <h2 align="center">CADASTRAR ALUGUEL</h2>
+            </header>
+            <form align="center" action ="" method = "post">
+                <label for="id_imovel">ID Imóvel (Proprietário)</label><br>
+                <input type="text" name="id_imovel" placeholder="ID Imóvel" /><br>
+                <label for="id_inquilino">ID Inquilino (Nome)</label><br>
+                <input type="text" name="id_inquilino" placeholder="ID Inquilino" /><br><br>
+                <input type="submit" value="Cadastrar" /><br>
+            </form>
+        </section>
+        <section>  
+            <header>
+               <h2 align="center">IMÓVEIS CADASTRADOS</h2>
+            </header>
+            <table border="1" align="center">
+                <thead>
+                    <tr class="thead">
+                        <th>Proprietário</th>
+                        <th>Logradouro</th>
+                        <th>CEP</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for imovel in imovel %}
+                        <tr align="center">
+                            <td>{{ imovel.proprietario }}</td>
+                            <td>{{ imovel.logradouro }}</td>
+                            <td>{{ imovel.cep }}</td>
+                            <td>{{ imovel.bairro }}</td>
+                            <td>{{ imovel.cidade }}</td> 
+                        </tr>
+                    {% endfor %}
+                </tbody>   
+            </table><br>
+        </section>
+        <section>  
+            <header>
+               <h2 align="center">INQUILINOS CADASTRADOS</h2>
+            </header>
+            <table border="1" align="center">
+                <thead>
+                    <tr class="thead">
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Data de Nascimento</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    {% for inquilino in inquilino %}
+                        <tr align="center">
+                            <td>{{ inquilino.nome }}</td>
+                            <td>{{ inquilino.cpf }}</td>
+                            <td>{{ inquilino.data_nascimento }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>   
+            </table><br>
+        </section>
+        <section align="center">
+            <a class="botao_acao" href="{{ url_for('menu_aluguel') }}"> Voltar </a>
+        </section>
+    </body>
+</html>
